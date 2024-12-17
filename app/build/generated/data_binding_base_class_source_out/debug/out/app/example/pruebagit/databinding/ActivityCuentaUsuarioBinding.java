@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,7 +24,7 @@ import java.lang.String;
 
 public final class ActivityCuentaUsuarioBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final Button btnBuscarUsuario;
@@ -62,7 +63,7 @@ public final class ActivityCuentaUsuarioBinding implements ViewBinding {
   public final ConstraintLayout layoutTransferir;
 
   @NonNull
-  public final ConstraintLayout main;
+  public final ScrollView main;
 
   @NonNull
   public final TextView title;
@@ -79,14 +80,14 @@ public final class ActivityCuentaUsuarioBinding implements ViewBinding {
   @NonNull
   public final TextView tvTitleNumeroCuenta;
 
-  private ActivityCuentaUsuarioBinding(@NonNull ConstraintLayout rootView,
+  private ActivityCuentaUsuarioBinding(@NonNull ScrollView rootView,
       @NonNull Button btnBuscarUsuario, @NonNull Button btnTranfesrir,
       @NonNull CardView cardRetirar, @NonNull CardView cardTransferir,
       @NonNull EditText etCantidadDepositar, @NonNull EditText etUsuarioEncontrado,
       @NonNull ImageView imageSalir, @NonNull CircleImageView imageViewC,
       @NonNull ConstraintLayout imagenNombreLayout, @NonNull CircleImageView imagenUsuarioBuscado,
       @NonNull LinearLayout layoutContenidoCantidad, @NonNull ConstraintLayout layoutTransferir,
-      @NonNull ConstraintLayout main, @NonNull TextView title, @NonNull TextView tvCantidadTitle,
+      @NonNull ScrollView main, @NonNull TextView title, @NonNull TextView tvCantidadTitle,
       @NonNull TextView tvNombreUsuarioB, @NonNull TextView tvSaldoUsuario,
       @NonNull TextView tvTitleNumeroCuenta) {
     this.rootView = rootView;
@@ -112,7 +113,7 @@ public final class ActivityCuentaUsuarioBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -209,7 +210,7 @@ public final class ActivityCuentaUsuarioBinding implements ViewBinding {
         break missingId;
       }
 
-      ConstraintLayout main = (ConstraintLayout) rootView;
+      ScrollView main = (ScrollView) rootView;
 
       id = R.id.title;
       TextView title = ViewBindings.findChildViewById(rootView, id);
@@ -241,7 +242,7 @@ public final class ActivityCuentaUsuarioBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityCuentaUsuarioBinding((ConstraintLayout) rootView, btnBuscarUsuario,
+      return new ActivityCuentaUsuarioBinding((ScrollView) rootView, btnBuscarUsuario,
           btnTranfesrir, cardRetirar, cardTransferir, etCantidadDepositar, etUsuarioEncontrado,
           imageSalir, imageViewC, imagenNombreLayout, imagenUsuarioBuscado, layoutContenidoCantidad,
           layoutTransferir, main, title, tvCantidadTitle, tvNombreUsuarioB, tvSaldoUsuario,
